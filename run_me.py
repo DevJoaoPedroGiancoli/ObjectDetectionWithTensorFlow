@@ -6,6 +6,10 @@ classFile = 'coco.names'
 
 imagePath = "test/1.jpg"
 
+videoPath = "test/street1.mp4"
+
+threshold = 0.5
+
 detector = Detector()
 
 detector.readClasses(classFile)
@@ -14,4 +18,6 @@ detector.downloadModel(modelURL)
 
 detector.loadModel()
 
-detector.predictImage(imagePath)
+#detector.predictImage(imagePath, threshold)
+
+detector.predictVideo(videoPath, threshold)
